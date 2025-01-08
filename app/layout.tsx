@@ -14,7 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="bg-blue-600 text-white p-4">
+        {/* Header Section */}
+        <header className="bg-blue-600 text-white p-4 shadow-md">
           <nav className="container mx-auto flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold">
@@ -56,7 +57,7 @@ export default function RootLayout({
             <div
               className={`${
                 isMenuOpen ? 'block' : 'hidden'
-              } md:flex md:items-center space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0`}
+              } md:flex md:items-center space-y-4 md:space-y-0 md:space-x-6 mt-4 md:mt-0 transition-all duration-300 ease-in-out`}
             >
               <Link href="/about" className="hover:underline block md:inline-block">
                 About
@@ -79,7 +80,44 @@ export default function RootLayout({
             </div>
           </nav>
         </header>
-        <main>{children}</main>
+
+        {/* Main Content */}
+        <main className="container mx-auto py-8">{children}</main>
+
+        {/* Footer Section */}
+        <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><Link href="/about" className="hover:underline">About Scott</Link></li>
+                <li><Link href="/policies" className="hover:underline">Policies</Link></li>
+                <li><Link href="/events" className="hover:underline">Events</Link></li>
+                <li><Link href="/donate" className="hover:underline">Donate</Link></li>
+                <li><Link href="/volunteer" className="hover:underline">Volunteer</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contact</h3>
+              <p>Email: scott.yung@nswliberal.org.au</p>
+              <p>Phone: 02 8356 0300</p>
+              <p>Address: PO BOX 892, Chatswood 2057</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+              <div className="flex space-x-4">
+                <a href="#" className="hover:text-blue-400">LinkedIn</a>
+                <a href="#" className="hover:text-blue-400">Instagram</a>
+                <a href="#" className="hover:text-blue-400">Facebook</a>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <p>&copy; 2025 Scott Yung Campaign. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
       </body>
     </html>
   );
