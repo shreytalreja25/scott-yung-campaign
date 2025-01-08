@@ -1,7 +1,9 @@
 {
   "/page": "app/page.js",
   "/events/page": "app/events/page.js",
-  "/volunteer/page": "app/volunteer/page.js",
+  "/policies/page": "app/policies/page.js",
+  "/about/page": "app/about/page.js",
   "/donate/page": "app/donate/page.js",
-  "/about/page": "app/about/page.js"
+  "/volunteer/page": "app/volunteer/page.js",
+  "/grievance/page": "app/grievance/page.js"
 }
