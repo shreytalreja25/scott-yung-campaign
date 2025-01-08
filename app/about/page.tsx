@@ -9,7 +9,7 @@ export default function AboutPage() {
       <h1 className="text-4xl font-bold mb-8 text-center">About Scott Yung</h1>
 
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row items-start justify-between md:space-x-8 mb-10">
+      <div className="flex flex-col md:flex-row items-center justify-between md:space-x-8 mb-10">
         {/* Image Section */}
         <Image
           src="/placeholder.jpg"
